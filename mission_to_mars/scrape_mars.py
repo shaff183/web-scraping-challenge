@@ -118,7 +118,7 @@ def scrape():
 
     # adding all of this scraped data into a single dictionary which will then go into a MongoDB
     scraped_mars_data = {
-        "news title": first_title,
+        "news_title": first_title,
         "news_paragraph": first_paragraph,
         "featured_image": featured_image_url,
         "mars_fact_table": html_table,
