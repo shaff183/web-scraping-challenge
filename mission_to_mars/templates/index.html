@@ -22,22 +22,21 @@
         <div class = "row">
             <div class = "col-md-12">
                 <h2>Latest Mars News</h2>
-                <h4>{{mars_data.first_title}}</h4>
-                <p>{{mars_data.first_paragraph}}</p>
+                <h3>{{mars_data.news_title}}</h3>
+                <p>{{mars_data.news_paragraph}}</p>
             </div>
         </div>
-
+        <hr>
         <div class ="row">
-            <div class = "col-md-8">
+            <div class = "col-md-6">
                 <h2>Featured Mars Image</h2>
                 <img width="100%" src="{{mars_data.featured_image}}">
             </div>
-            <div class = "col-md-4">
+            <div class = "col-md-6">
                     <h2>Mars Facts</h2>
-                    <table class="table">
-                      <table class="table table-striped">
-                        {{mars_data.mars_fact_table | safe}}
-                      </table>
+                    <table class = "table table-bordered table-striped">
+                        <thead class = "mytable-thead">
+                      <tbody class = "mytable-thead-th table-striped" {{ mars_data.mars_fact_table | safe }}></tbody>
                     </table>
             </div>
         </div>

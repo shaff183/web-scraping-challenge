@@ -17,10 +17,10 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_database")
 def index():
 
     # Find one record of data from Mongo
-    mars_data = mongo.db.collection.find_one()
+    mars_collection = mongo.db.collection.find_one()
     
     # Activate jinja within the website index page
-    return render_template("index.html", mars_data=mars_data)
+    return render_template("index.html", mars_data=mars_collection)
 
 
 @app.route("/scrape")

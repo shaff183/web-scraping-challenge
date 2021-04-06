@@ -29,13 +29,10 @@ def scrape():
 
     # scraping the fist articles title and putting it in a variable
     first_title = news_articles.find_all('div', 'content_title')[0].text
-    print(first_title)
-
+    
     # scraping first articles paragraph and putting it in a variable
     first_paragraph = news_articles.find_all('div', 'article_teaser_body')[0].text
-    print(first_paragraph)
-
-
+    
 
     # JPL MARS SPACE IMAGES - FEATURED IMAGE
     # Finding current Featured Mars Image from website
@@ -116,8 +113,8 @@ def scrape():
     image_title_url_dict
 
 
-    # adding all of this scraped data into a single dictionary which will then go into a MongoDB
-    scraped_mars_data = {
+    # adding all of the scraped data into a single dictionary which will then go into a MongoDB
+    mars_data = {
         "news_title": first_title,
         "news_paragraph": first_paragraph,
         "featured_image": featured_image_url,
@@ -135,5 +132,5 @@ def scrape():
 
     browser.quit()
 
-    return scraped_mars_data
+    return mars_data
 
